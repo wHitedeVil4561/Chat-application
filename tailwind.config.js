@@ -11,6 +11,7 @@ module.exports = {
         "light-white": "#f5f7fb",
         "light-pink": "#f2d1e1",
         "dark-text": "#495057",
+        "input-border":"#bfd1e3"
       },
       boxShadow: {
         "4y": "0 4px 4px  rgba(0, 0, 0, 0.3)",
