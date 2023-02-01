@@ -1,0 +1,8 @@
+.details{
+    max-height: calc(100vh - 352px);
+}
+:host::ng-deep{
+    .material-icons{
+        color: #495057;
+    }
+}

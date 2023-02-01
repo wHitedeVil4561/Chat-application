@@ -1,0 +1,36 @@
+.sidenav {
+  box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.1);
+}
+.logo {
+  height: 60px;
+  width: 60px;
+}
+.profile-img {
+  width: 40px;
+  height: 40px;
+}
+.activeroute {
+  .material-icons {
+    font-size: 28px !important;
+    color: rgba($color: blue, $alpha: 0.8) !important;
+  }
+}
+:host::ng-deep {
+  .mat-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .material-icons {
+    font-size: 28px !important;
+    color: rgba($color: #404040, $alpha: 0.8);
+    line-height: normal;
+  }
+  .activeroute {
+    background: #f7f7ff;
+    border-radius: 6px;
+    .material-icons {
+      font-size: 28px !important;
+      color: #8174ef;
+    }
+  }
+}

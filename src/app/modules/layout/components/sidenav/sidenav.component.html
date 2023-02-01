@@ -1,0 +1,56 @@
+<div class="sidenav flex flex-col justify-between h-full items-center p-3">
+  <img src="assets/img/chatlogo.png" class="logo" />
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/profile"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon class="">face</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/chats"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon>chat</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/groups"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon>group</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/contacts"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon> contacts</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/settings"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon>settings</mat-icon>
+  </div>
+  <div class="p-3 flex items-center cursor-pointer">
+    <mat-icon>language</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    *ngIf="!dark"
+    (click)="dark = !dark"
+  >
+    <mat-icon>brightness_2</mat-icon>
+  </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    *ngIf="dark"
+    (click)="dark = !dark"
+  >
+    <mat-icon>wb_sunny</mat-icon>
+  </div>
+  <img src="assets/img/profile-circle.png" class="profile-img" />
+</div>
