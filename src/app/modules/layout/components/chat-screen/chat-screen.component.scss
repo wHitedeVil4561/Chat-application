@@ -1,6 +1,23 @@
 .chat-screen {
   width: calc(100vw - 484px);
-  .chat-footer{
+  .chat-footer {
     top: calc(100vh - 80px);
+  }
+}
+:host::ng-deep {
+  .chat-footer {
+    .mat-icon {
+      cursor: pointer;
+      width: 28px !important;
+      height: 28px !important;
+    }
+    .material-icons {
+      font-size: 28px !important;
+      color: rgba($color: blue, $alpha: .6);
+      line-height: normal;
+    }
+    .send{
+      color: white;
+    }
   }
 }
