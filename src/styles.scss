@@ -39,6 +39,9 @@ $chat-theme: mat.define-light-theme((
 @tailwind utilities;
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*,body,html{
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'comic-neue';
   src: url('./assets/font/ComicNeue-Regular.ttf') format("truetype");

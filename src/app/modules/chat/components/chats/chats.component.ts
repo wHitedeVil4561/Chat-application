@@ -1,14 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
+import { RootReducerState, getUserInput } from 'src/app/reducer';
 
 @Component({
   selector: 'app-chats',
   templateUrl: './chats.component.html',
   styleUrls: ['./chats.component.scss'],
 })
-export class ChatsComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ChatsComponent implements OnInit,OnDestroy {
+  constructor(private store:Store<RootReducerState>) {}
+  count!:number;
+  value$!:Subscription;
+  ngOnInit(): void {
+    this.value$ = this.store.select(getUserInput).subscribe((data:any)=>{
+      this.count = data;
+      console.log(this.count,'=================>');
+      
+    })
+  }
   chats = [
     {
       profilePath: 'assets/img/profile-circle.png',
@@ -16,7 +26,7 @@ export class ChatsComponent implements OnInit {
       userName: 'Sumit Gupta',
       lastMsg: 'Hey! I am avaliable Hey! I am avaliable',
       lastMsgTime: '05 min',
-      unreadMsgCount: 0,
+      unreadMsgCount: this.count,
     },
     {
       profilePath: 'assets/img/profile-circle.png',
@@ -96,5 +106,9 @@ export class ChatsComponent implements OnInit {
       return message
     }
     return message.slice(0, 25) + "..."
+  }
+  ngOnDestroy(): void {
+    
+    this.value$.unsubscribe()
   }
 }

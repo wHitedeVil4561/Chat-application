@@ -18,7 +18,14 @@
       <mat-icon>more_horiz</mat-icon>
     </div>
   </div>
-  <div class="chat-content"></div>
+  <div class="chat-content h-full flex items-center">
+    <div class="flex  w-full justify-center items-center gap-10">
+      <mat-icon class="cursor-pointer" (click)="onDecreament()">remove_circle</mat-icon>
+      <input class="h-10 border border-input-border rounded-lg outline-none px-5" [value]="value"/>
+      <mat-icon class="cursor-pointer" (click)="onIncreament()">add_circle</mat-icon>
+      <mat-icon class="cursor-pointer" (click)="onReset()">delete_forever</mat-icon>
+    </div>
+  </div>
   <div
     class="chat-footer border-t w-full px-3 py-5 sticky flex justify-between gap-5"
   >
