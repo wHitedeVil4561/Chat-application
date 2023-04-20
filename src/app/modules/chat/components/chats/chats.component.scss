@@ -1,3 +1,6 @@
-.chats{
-    max-height: calc(100vh - 192px);
+.chats {
+  max-height: calc(100vh - 192px);
+}
+::-webkit-scrollbar {
+  display: none !important;
 }

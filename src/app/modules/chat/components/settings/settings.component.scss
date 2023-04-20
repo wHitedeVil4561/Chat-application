@@ -1,8 +1,23 @@
-.details{
-    max-height: calc(100vh - 352px);
+.details {
+  max-height: calc(100vh - 352px);
 }
-:host::ng-deep{
-    .material-icons{
-        color: #495057;
-    }
+:host::ng-deep {
+  .material-icons {
+    color: #495057;
+  }
+}
+.fadeanimation {
+  height: 0;
+}
+
+@keyframes fadeInOut {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
+::-webkit-scrollbar {
+  display: none !important;
 }

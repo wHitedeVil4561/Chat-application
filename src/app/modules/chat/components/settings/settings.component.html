@@ -11,44 +11,47 @@
     <div class="flex flex-col rounded-md border border-neu">
       <div
         class="flex justify-between items-center px-5 h-12 bg-light-white font-medium w-full cursor-pointer"
+        (click)="onChangeMode('personal')"
       >
         <span class="text-lg text-dark-text">Personal Info</span>
         <mat-icon>expand_more</mat-icon>
       </div>
-      <div class="bg-white p-5 flex flex-col gap-6">
-        <div class="w-full flex justify-between">
-          <div class="text-lg">
-            <span class="text-faded font-normal">Name</span> <br /><span
-              class="text-dark-text font-medium"
-              >Admin</span
-            >
+      <div class="bg-white  relative z-10" *ngIf="mode == 'personal'">
+        <div class="flex flex-col p-5 gap-6 bg-white">
+          <div class="w-full flex justify-between">
+            <div class="text-lg">
+              <span class="text-faded font-normal">Name</span> <br /><span
+                class="text-dark-text font-medium"
+                >Admin</span
+              >
+            </div>
+            <button class="bg-neu p-2 flex items-center gap-2 text-sm h-7">
+              <mat-icon>edit</mat-icon> Edit
+            </button>
           </div>
-          <button class="bg-neu p-2 flex items-center gap-2 text-sm h-7">
-            <mat-icon>edit</mat-icon> Edit
-          </button>
-        </div>
-        <div class="w-full">
-          <div class="text-lg">
-            <span class="text-faded font-normal">Email</span> <br /><span
-              class="text-dark-text font-medium"
-              >abc@gmail.com</span
-            >
+          <div class="w-full">
+            <div class="text-lg">
+              <span class="text-faded font-normal">Email</span> <br /><span
+                class="text-dark-text font-medium"
+                >abc@gmail.com</span
+              >
+            </div>
           </div>
-        </div>
-        <div class="w-full">
-          <div class="text-lg">
-            <span class="text-faded font-normal">Time</span> <br /><span
-              class="text-dark-text font-medium"
-              >11:40 AM</span
-            >
+          <div class="w-full">
+            <div class="text-lg">
+              <span class="text-faded font-normal">Time</span> <br /><span
+                class="text-dark-text font-medium"
+                >11:40 AM</span
+              >
+            </div>
           </div>
-        </div>
-        <div class="w-full">
-          <div class="text-lg">
-            <span class="text-faded font-normal">Location</span> <br /><span
-              class="text-dark-text font-medium"
-              >California, USA</span
-            >
+          <div class="w-full">
+            <div class="text-lg">
+              <span class="text-faded font-normal">Location</span> <br /><span
+                class="text-dark-text font-medium"
+                >California, USA</span
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -58,18 +61,21 @@
     >
       <div
         class="flex justify-between items-center px-5 h-12 bg-light-white font-medium w-full cursor-pointer"
+        (click)="onChangeMode('privacy')"
       >
         <span class="text-lg text-dark-text">Privacy</span>
         <mat-icon>expand_more</mat-icon>
       </div>
-      <div class="bg-white w-full p-5 flex flex-col">
+      <div class="bg-white w-full p-5 flex flex-col" *ngIf="mode == 'privacy'">
         <div class="w-full flex items-center gap-3 py-3 border-b-2 text-base">
           Profile photo
           <button class="bg-neu flex items-center p-1 rounded-sm">
             Everyone<mat-icon>expand_more</mat-icon>
           </button>
         </div>
-        <div class="w-full flex gap-3  border-b-2  py-3 items-center text-base font-normal">
+        <div
+          class="w-full flex gap-3 border-b-2 py-3 items-center text-base font-normal"
+        >
           <span>Last seen</span>
           <mat-slide-toggle color="primary"></mat-slide-toggle>
         </div>
@@ -79,7 +85,9 @@
             Everyone<mat-icon>expand_more</mat-icon>
           </button>
         </div>
-        <div class="w-full flex gap-3 border-b-2  py-3 items-center text-base font-normal">
+        <div
+          class="w-full flex gap-3 border-b-2 py-3 items-center text-base font-normal"
+        >
           <span>Read receipts</span>
           <mat-slide-toggle color="primary"></mat-slide-toggle>
         </div>

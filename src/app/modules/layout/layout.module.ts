@@ -8,6 +8,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { ChatScreenComponent } from './components/chat-screen/chat-screen.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     LayoutRoutingModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class LayoutModule { }
