@@ -10,6 +10,8 @@ export class ChatScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('lfdlksaj');
+    
   }
 
 }
