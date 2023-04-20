@@ -1,3 +1,6 @@
-.groups{
-    max-height: calc(100vh - 184px);
+.groups {
+  max-height: calc(100vh - 184px);
+}
+::-webkit-scrollbar {
+  display: none !important;
 }

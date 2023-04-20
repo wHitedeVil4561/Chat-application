@@ -1,3 +1,6 @@
-.profile{
-    max-height: calc(100vh - 313px);
+.profile {
+  max-height: calc(100vh - 313px);
+}
+::-webkit-scrollbar {
+  display: none !important;
 }

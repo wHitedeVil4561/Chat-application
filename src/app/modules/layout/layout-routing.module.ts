@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: ContainerComponent,
+    data: { screen: 'container' },
     children: [
       {
         path: '',
