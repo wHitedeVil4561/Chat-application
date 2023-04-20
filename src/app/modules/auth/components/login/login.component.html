@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div
+  class="shadow-lg p-5 max-w-[440px] mx-auto w-full flex flex-col gap-3 rounded-lg bg-white relative z-10"
+>
+  <div class="text-2xl font-semibold font-source mx-auto">Welcome back!</div>
+  <form class="flex flex-col gap-5">
+    <div class="form-item flex flex-col gap-1">
+      <label>Email/Phone</label>
+      <input
+        class="border h-12 rounded w-full px-5 form-control"
+        placeholder="Enter email/phone"
+      />
+    </div>
+    <div class="form-item flex flex-col gap-1">
+      <label>Password</label>
+      <input
+        class="border h-12 rounded w-full px-5 form-control"
+        placeholder="Enter password"
+      />
+      <div class="text-blue flex justify-end">Forgot Password?</div>
+    </div>
+    <div class="form-item flex flex-col items-center gap-2 justify-center">
+      <button
+        class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"
+        routerLink="sign-up"
+      >
+        Login
+      </button>
+      <span class="cursor-pointer">Create an account</span>
+    </div>
+  </form>
+</div>
