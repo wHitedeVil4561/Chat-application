@@ -63,3 +63,10 @@ body {
   font-family: "lato";
   src: url("./assets/font/Lato-Regular.ttf") format("truetype");
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}

@@ -3,15 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-chat-screen',
   templateUrl: './chat-screen.component.html',
-  styleUrls: ['./chat-screen.component.scss']
+  styleUrls: ['./chat-screen.component.scss'],
 })
 export class ChatScreenComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log('lfdlksaj');
-    
-  }
-
+  ngOnInit(): void {}
 }
