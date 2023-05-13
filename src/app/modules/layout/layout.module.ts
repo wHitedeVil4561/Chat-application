@@ -9,15 +9,21 @@ import { ChatScreenComponent } from './components/chat-screen/chat-screen.compon
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [BottomnavComponent,SidenavComponent, ContainerComponent, ChatScreenComponent],
+  declarations: [
+    BottomnavComponent,
+    SidenavComponent,
+    ContainerComponent,
+    ChatScreenComponent,
+  ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
     MaterialModule,
     RouterModule,
-  ]
+    FormsModule,
+  ],
 })
-export class LayoutModule { }
+export class LayoutModule {}

@@ -9,10 +9,11 @@ const routes: Routes = [
     path: '',
     component: AuthContainerComponent,
     children: [
-      { path: '', component: LoginComponent },
+      { path: '', component: LoginComponent, data: { screen: 'front' } },
       {
         path: 'sign-up',
         component: SignupComponent,
+        data: { screen: 'back' },
       },
     ],
   },

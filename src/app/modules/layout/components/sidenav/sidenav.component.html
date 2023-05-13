@@ -1,12 +1,8 @@
-<div class="sidenav relative z-10 flex flex-col justify-between h-full items-center p-3 bg-white">
+<div
+  class="sidenav relative z-10 flex flex-col justify-between h-full items-center p-3 bg-white"
+>
   <img src="assets/img/chatlogo.png" class="logo" />
-  <div
-    class="p-3 flex items-center cursor-pointer"
-    routerLink="/profile"
-    routerLinkActive="activeroute"
-  >
-    <mat-icon class="">face</mat-icon>
-  </div>
+
   <div
     class="p-3 flex items-center cursor-pointer"
     routerLink="/chats"
@@ -35,9 +31,17 @@
   >
     <mat-icon>settings</mat-icon>
   </div>
+  <div
+    class="p-3 flex items-center cursor-pointer"
+    routerLink="/profile"
+    routerLinkActive="activeroute"
+  >
+    <mat-icon class="">face</mat-icon>
+  </div>
   <div class="p-3 flex items-center cursor-pointer">
     <mat-icon>language</mat-icon>
   </div>
+
   <div
     class="p-3 flex items-center cursor-pointer"
     *ngIf="!dark"
@@ -52,5 +56,4 @@
   >
     <mat-icon>wb_sunny</mat-icon>
   </div>
-  <img src="assets/img/profile-circle.png" class="profile-img" />
 </div>

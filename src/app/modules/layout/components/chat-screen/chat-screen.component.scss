@@ -1,5 +1,8 @@
 .chat-screen {
   width: calc(100vw - 484px);
+  .chat-content {
+    height: calc(100vh - 160px);
+  }
   .chat-footer {
     top: calc(100vh - 80px);
   }

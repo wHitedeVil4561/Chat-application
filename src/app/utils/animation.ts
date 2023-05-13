@@ -1,6 +1,7 @@
 import {
   animate,
   group,
+  keyframes,
   query,
   state,
   style,
@@ -44,4 +45,30 @@ export const routeAnimation = trigger('routeAnimation', [
 
     // ]),
   ]),
+]);
+
+export const authAnimation = trigger('authAnimation', [
+  state('front', style({ transform: 'rotateY(0deg)' })),
+  state('back', style({ transform: 'rotateY(0deg)' })),
+  transition('front => back', [
+    style({ transform: 'rotateY(180deg)' }),
+    animate('500ms ease-out', style({ transform: 'rotateY(0deg)' })),
+  ]),
+  transition('back => front', [
+    style({ transform: 'rotateY(-180deg)' }),
+    animate('500ms ease-out', style({ transform: 'rotateY(0deg)' })),
+  ]),
+  //   transition('front => back', [
+  //     animate(
+  //       '6000ms ease-out',
+  //       style({ transform: 'rotateY(-180deg) translateX(100%)' })
+  //     ),
+  //   ]),
+  //   transition('back => front', [
+  //     style({ transform: 'rotateY(-180deg) translateX(-100%)' }),
+  //     animate(
+  //       '6000ms ease-out',
+  //       style({ transform: 'rotateY(0deg) translateX(0%)' })
+  //     ),
+  //   ]),
 ]);
