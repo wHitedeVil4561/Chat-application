@@ -38,6 +38,9 @@ $chat-theme: mat.define-light-theme(
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./app/styles/elements/element.input";
+
 @layer base {
   .linear-gradient-1 {
     background: linear-gradient(to top, #906cf5, #e159a2);

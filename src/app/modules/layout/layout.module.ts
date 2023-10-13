@@ -8,8 +8,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { ChatScreenComponent } from './components/chat-screen/chat-screen.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     RouterModule,
     FormsModule,
+    SharedModule,
   ],
 })
 export class LayoutModule {}

@@ -12,7 +12,7 @@ export class ContainerComponent implements OnInit {
 
   ngOnInit(): void {}
   getAnimation(route: any) {
-    // console.log(route);
+    console.log(route);
     // console.log(rout);
     if (route.isActivated) {
       // console.log(route.activatedRouteData['screen']);

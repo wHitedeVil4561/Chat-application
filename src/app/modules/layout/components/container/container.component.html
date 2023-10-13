@@ -1,6 +1,6 @@
 <div class="flex w-full h-full relative">
   <app-sidenav></app-sidenav>
-  <div class="relative bg-neu" [@routeAnimation]="getAnimation(outlet)">
+  <div class="relative bg-neu" [@routeAnimation]="outlet | outletData">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
   <app-chat-screen></app-chat-screen>

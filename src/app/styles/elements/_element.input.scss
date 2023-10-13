@@ -1,0 +1,19 @@
+.form-input {
+  transition: all 100ms ease-in-out;
+  //   &:focus-within {
+  //     border-image-source: linear-gradient(to top, #906cf5, #e159a2);
+  //     border-width: 1px;
+  //     border-image-slice: 1;
+  //     outline: none;
+  //     border-radius: 12px !important;
+  //   }
+  &:focus {
+    outline: 0;
+    // border-image-source: linear-gradient(to top, #906cf5, #e159a2);
+    // border-width: 1px;
+    // border-image-slice: 1;
+    // border-image-outset: 1px;
+    border-color: #e159a2;
+    box-shadow: 0 0 0 0.2rem rgba($color: #e159a2, $alpha: 0.2);
+  }
+}

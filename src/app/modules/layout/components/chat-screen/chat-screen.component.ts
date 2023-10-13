@@ -8,32 +8,32 @@ import { io } from 'socket.io-client';
   styleUrls: ['./chat-screen.component.scss'],
 })
 export class ChatScreenComponent implements OnInit {
-  constructor(private socket: Socket) {}
+  constructor() {}
   // socket: any;
   SOCKET_ENDPOINT = 'localhost:3000';
   message: string = '';
   messageArray: any = [];
   ngOnInit(): void {
     // this.setupSocketConnection();
-    this.onReceiveMsg();
+    // this.onReceiveMsg();
   }
   setupSocketConnection() {
     // this.socket = io(this.SOCKET_ENDPOINT);
   }
-  onSend() {
-    if (this.socket && this.message) {
-      this.socket.emit('message', this.message);
-      this.messageArray.push({ author: 'me', message: this.message });
-      this.message = '';
-    }
-  }
-  onReceiveMsg() {
-    console.log('fkjldsajfl');
+  // onSend() {
+  //   if (this.socket && this.message) {
+  //     this.socket.emit('message', this.message);
+  //     this.messageArray.push({ author: 'me', message: this.message });
+  //     this.message = '';
+  //   }
+  // }
+  // onReceiveMsg() {
+  //   console.log('fkjldsajfl');
 
-    this.socket.on('message-broadcast', (message: string) => {
-      console.log(message);
+  //   this.socket.on('message-broadcast', (message: string) => {
+  //     console.log(message);
 
-      this.messageArray.push({ author: 'other', message });
-    });
-  }
+  //     this.messageArray.push({ author: 'other', message });
+  //   });
+  // }
 }

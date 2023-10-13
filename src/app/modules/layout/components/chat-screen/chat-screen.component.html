@@ -21,7 +21,7 @@
     </div>
     <div class="chat-content w-full flex flex-col justify-end">
       <ng-container *ngFor="let msg of messageArray">
-        <div class="flex w-full p-1  justify-end" *ngIf="msg.author == 'me'">
+        <div class="flex w-full p-1 justify-end" *ngIf="msg.author == 'me'">
           <div class="px-5 py-3 bg-light-pink w-fit rounded-md">
             {{ msg.message }}
           </div>
@@ -46,7 +46,7 @@
       <div class="flex gap-5 items-center">
         <mat-icon>tag_faces</mat-icon>
         <mat-icon> attach_file</mat-icon>
-        <mat-icon (click)="onSend()">send</mat-icon>
+        <!-- <mat-icon (click)="onSend()">send</mat-icon> -->
       </div>
     </div>
   </div>
